@@ -50,8 +50,8 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 ifeq ($(TARGET_KERNEL_VERSION),4.9)
 BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_VERSION := 4.9
-TARGET_KERNEL_CLANG_VERSION := 6875598
 endif
 
 # ANT
@@ -202,7 +202,7 @@ TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/fstab.recovery.qcom
 endif
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Wi-Fi
